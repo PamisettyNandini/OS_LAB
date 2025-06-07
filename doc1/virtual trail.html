@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Virtual Trial Room - Yukti Innovation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+    header {
+      background: #3f51b5;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    /* Tabs container */
+    .tabs {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    /* Hide radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+    /* Tabs labels as buttons */
+    .tab-labels {
+      display: flex;
+      background: #3f51b5;
+    }
+    .tab-labels label {
+      flex: 1;
+      padding: 15px;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+    .tab-labels label:hover {
+      background: #2c387e;
+    }
+    /* Active tab styling */
+    input#tab1:checked ~ .tab-labels label[for="tab1"],
+    input#tab2:checked ~ .tab-labels label[for="tab2"],
+    input#tab3:checked ~ .tab-labels label[for="tab3"],
+    input#tab4:checked ~ .tab-labels label[for="tab4"] {
+      background: white;
+      color: #3f51b5;
+      font-weight: 700;
+      border-bottom: 3px solid #3f51b5;
+    }
+    /* Tab content sections */
+    .tab-content {
+      padding: 20px 30px;
+      display: none;
+      color: #444;
+      font-size: 1.1rem;
+    }
+    /* Show content of checked tab */
+    #tab1:checked ~ .content #content1,
+    #tab2:checked ~ .content #content2,
+    #tab3:checked ~ .content #content3,
+    #tab4:checked ~ .content #content4 {
+      display: block;
+    }
+    /* Demo video styling */
+    .video-container {
+      margin-top: 15px;
+      text-align: center;
+    }
+    iframe {
+      max-width: 100%;
+      height: 300px;
+      border-radius: 8px;
+      border: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px 10px;
+      background: #3f51b5;
+      color: white;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>👗 Virtual Trial Room 👚</header>
+
+<div class="tabs">
+  <!-- Radio buttons -->
+  <input type="radio" id="tab1" name="tab-control" checked />
+  <input type="radio" id="tab2" name="tab-control" />
+  <input type="radio" id="tab3" name="tab-control" />
+  <input type="radio" id="tab4" name="tab-control" />
+
+  <!-- Tab labels -->
+  <div class="tab-labels">
+    <label for="tab1">❗ Problem</label>
+    <label for="tab2">💡 Solution</label>
+    <label for="tab3">🎥 Demo</label>
+    <label for="tab4">👩‍💻 About Me</label>
+  </div>
+
+  <!-- Tab content -->
+  <div class="content">
+    <section id="content1" class="tab-content">
+      <h2>❗ Problem Statement</h2>
+      <p>Online shoppers face the problem of incorrect size and fit, leading to high return rates and customer dissatisfaction. This wastes time, money, and resources.</p>
+    </section>
+
+    <section id="content2" class="tab-content">
+      <h2>💡 Our Solution</h2>
+      <ul>
+        <li>📱 Scan your body measurements live using your phone camera.</li>
+        <li>👗 Virtually try on dresses and see how they fit in real-time.</li>
+        <li>🧠 Get smart size recommendations for the perfect fit.</li>
+        <li>🚚 Reduce returns and shop confidently from home.</li>
+      </ul>
+    </section>
+
+    <section id="content3" class="tab-content">
+      <h2>🎥 Demo Video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/2ZcUPmAsn2c" title="Virtual Trial Room Demo" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="content4" class="tab-content">
+      <h2>👩‍💻 About the Innovator</h2>
+      <p><strong>Nandini Pamsetty</strong> – B.Tech 2nd Year Student passionate about AI and innovation.</p>
+    </section>
+  </div>
+</div>
+
+<footer>© 2025 Nandini Pamsetty</footer>
+
+</body>
+</html>
